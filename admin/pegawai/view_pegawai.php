@@ -48,7 +48,7 @@
 								<b>No HP</b>
 							</td>
 							<td>:
-								<?php echo $data_cek['masuk']; ?>
+								<?php echo $data_cek['no_hp']; ?>
 							</td>
 						</tr>
 						<tr>
@@ -56,7 +56,15 @@
 								<b>Status</b>
 							</td>
 							<td>:
-								<?php echo $data_cek['kategori']; ?>
+								<?php echo $data_cek['status']; ?>
+							</td>
+						</tr>
+						<tr>
+							<td style="width: 150px">
+								<b>Jabatan</b>
+							</td>
+							<td>:
+								<?php echo $data_cek['jabatan']; ?>
 							</td>
 						</tr>
 					</tbody>

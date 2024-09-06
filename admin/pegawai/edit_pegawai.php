@@ -40,30 +40,35 @@
 			</div>
 
 			<div class="form-group row">
-				<label class="col-sm-2 col-form-label">masuk</label>
+				<label class="col-sm-2 col-form-label">No HP</label>
 				<div class="col-sm-5">
-					<input type="date" class="form-date" id="masuk" name="masuk" value="<?php echo $data_cek['masuk']; ?>"
+					<input type="text" class="form-control" id="no_hp" name="no_hp" value="<?php echo $data_cek['no_hp']; ?>"
 					/>
 				</div>
 			</div>
 
 			<div class="form-group row">
-				<label class="col-sm-2 col-form-label">Kategori</label>
+				<label class="col-sm-2 col-form-label">Status</label>
 				<div class="col-sm-4">
-					<select name="kategori" id="kategori" class="form-control">
+					<select name="status" id="status" class="form-control">
 						<option value="">-- Pilih --</option>
 						<?php
                 //cek data yg dipilih sebelumnya
-                if ($data_cek['kategori'] == "BLOK_1") echo "<option value='BLOK_1' selected>BLOK 1</option>";
-                else echo "<option value='BLOK_1'>BLOK_1</option>";
+                if ($data_cek['status'] == "Pegawai") echo "<option value='Pegawai' selected>Pegawai</option>";
+                else echo "<option value='Pegawai'>Pegawai</option>";
 
-                if ($data_cek['kategori'] == "BLOK_2") echo "<option value='BLOK_2' selected>BLOK 2</option>";
-                else echo "<option value='BLOK_2'>BLOK_2</option>";
-
-                if ($data_cek['kategori'] == "BLOK_3") echo "<option value='BLOK_3' selected>BLOK 3</option>";
-                else echo "<option value='BLOK_3'>BLOK_3</option>";
-				?>
+                if ($data_cek['status'] == "Honorer") echo "<option value='Honorer' selected>Honorer</option>";
+                else echo "<option value='Honorer'>Honorer</option>";
+            			?>
 					</select>
+				</div>
+			</div>
+
+			<div class="form-group row">
+				<label class="col-sm-2 col-form-label">Jabatan</label>
+				<div class="col-sm-5">
+					<input type="text" class="form-control" id="jabatan" name="jabatan" value="<?php echo $data_cek['jabatan']; ?>"
+					/>
 				</div>
 			</div>
 
@@ -109,8 +114,9 @@ if (isset ($_POST['Ubah'])){
         $sql_ubah = "UPDATE tb_pegawai SET
 			nama='".$_POST['nama']."',
 			alamat='".$_POST['alamat']."',
-			masuk='".$_POST['masuk']."',
-			kategori='".$_POST['kategori']."',
+			no_hp='".$_POST['no_hp']."',
+			status='".$_POST['status']."',
+			jabatan='".$_POST['jabatan']."',
 			foto='".$nama_file."'		
             WHERE nip='".$_POST['nip']."'";
         $query_ubah = mysqli_query($koneksi, $sql_ubah);
@@ -119,8 +125,9 @@ if (isset ($_POST['Ubah'])){
 		$sql_ubah = "UPDATE tb_pegawai SET
 		nama='".$_POST['nama']."',
 		alamat='".$_POST['alamat']."',
-		masuk='".$_POST['masuk']."',
-		kategori='".$_POST['kategori']."'		
+		no_hp='".$_POST['no_hp']."',
+		status='".$_POST['status']."',
+		jabatan='".$_POST['jabatan']."'		
 		WHERE nip='".$_POST['nip']."'";
 	$query_ubah = mysqli_query($koneksi, $sql_ubah);
         }

@@ -55,13 +55,6 @@
 					<img src="../foto/<?php echo $data['foto']; ?>" width="150px" />
 				</td>
 			</tr>
-			<!-- <tr>
-				<td>Nama</td>
-				<td>:</td>
-				<td>
-					<?php echo $data['nip']; ?>
-				</td>
-			</tr> -->
 			<tr>
 				<td>Nama</td>
 				<td>:</td>
@@ -77,17 +70,24 @@
 				</td>
 			</tr>
 			<tr>
-				<td>Tanggal Masuk</td>
+				<td>No HP</td>
 				<td>:</td>
 				<td>
-					<?php echo $data['masuk']; ?>
+					<?php echo $data['no_hp']; ?>
 				</td>
 			</tr>
 			<tr>
-				<td>Kategori</td>
+				<td>Status</td>
 				<td>:</td>
 				<td>
-					<?php echo $data['kategori']; ?>
+					<?php echo $data['status']; ?>
+				</td>
+			</tr>
+			<tr>
+				<td>Jabatan</td>
+				<td>:</td>
+				<td>
+					<?php echo $data['jabatan']; ?>
 				</td>
 			</tr>
 			<?php } ?>
